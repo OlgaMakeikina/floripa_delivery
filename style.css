@@ -46,6 +46,7 @@ h1 {
     z-index: 1000;
     font-size: 14px;
     transition: right 0.5s ease;
+    text-align: center;
 }
 .close_btn {
     position: absolute;
@@ -104,6 +105,7 @@ h1 {
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     padding: 5px;
+    text-align: center;
 }
 .menu {
     display: flex;
@@ -166,7 +168,7 @@ h1 {
 }
 #about {
     background-color: rgb(62, 180, 137, 0.5);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8) 
+
 }
 .about_family {
     font-family: 'Montserrat', sans-serif;
@@ -177,33 +179,41 @@ h1 {
 }
 .team {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap; 
+    justify-content: space-evenly; 
+    gap: 20px; 
+}
+
+.person {
+    flex: 1 1 200px; 
+    max-width: 250px; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    border: 1px solid #ccc; 
+    padding: 15px; 
+    background-color: rgb(245, 245, 220, 0.4); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+    border-radius: 10px; 
+    margin: 15px;
     font-family: 'Montserrat', sans-serif;
     color: #4B2E1E;
-    text-align: center;
-    margin: 0 10% 0 10%;
 }
-.person {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 430px;
-    flex: 1;
-    text-align: center;
-    color: #4B2E1E;
-    margin: 20px;
+
+.person img {
+    border-radius: 50%; 
+    margin-bottom: 5px; 
 }
+
 .person h3 {
-    font-size: 18px;
+    margin-bottom: 5px; 
 }
-.text_about {
-    display: flex;
-   flex-direction: column;
+
+.person p {
+    margin-bottom: 5px; 
 }
-.text_about p {
-    margin: 0 auto;
-}
+
 
 .contact_box {
     display: flex;
@@ -212,6 +222,7 @@ h1 {
     color: #4B2E1E;
     font-family: 'Montserrat', sans-serif;
 }
+
 .contact_box h3 {
     margin-top: 50px;
 }
@@ -227,14 +238,14 @@ h1 {
     text-align: center;
     z-index: 1000;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8) 
   }
   
   .contact-menu ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
   .link {
@@ -287,15 +298,72 @@ h1 {
     background-color: transparent;
 }
 
+@media all and (max-width:1024px) {
+    .cakes {
+        margin: 5px;
+    }
+    .last_item {
+      display: none;
+   }
 
-    @media all and (max-width:800px) {
-        .text-one {
-            font-size: 15px;
-                    }
+   .person {
+        height: 470px;
+   }
+   #pictures {
+    width: 60%;
+} 
+}
+@media all and (max-width:913px) {
+    .menu {
+        justify-content: center;
+        margin: 10px;
+    }
+    .cakes {
+        margin: 20px;
+    }
+}
+    @media all and (max-width:854px) {
+
+.contact_box {
+    flex-direction: column-reverse;
+}
     }
     @media all and (max-width:500px) {
-        .text-one {
-            font-size: 15px;
-            margin-left: 30px;
-                    }
+.link span {
+    display: none;
+}
+.link img {
+    width: 50px;
+}
+.contact-menu {
+    justify-content: center;
+    margin: 0;
+}
+.contact-menu ul {
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .contact_box {
+    margin: 5%;
+}
+#pictures {
+    width: 90%;
+} 
+.availability_box {
+    width: 230px;
+}
     }
+
+
+    @media all and (max-width:400px) {
+       iframe {
+        width: 350px;
+       }
+            }
+            @media all and (max-width:375px) {
+                .link img {
+                    width: 45px;
+                }
+                     }
