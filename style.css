@@ -183,7 +183,11 @@ h1 {
     justify-content: space-evenly; 
     gap: 20px; 
 }
-
+.team_header {
+    color: #4B2E1E;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
 .person {
     flex: 1 1 200px; 
     max-width: 250px; 
@@ -196,7 +200,7 @@ h1 {
     background-color: rgb(245, 245, 220, 0.4); 
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
     border-radius: 10px; 
-    margin: 15px;
+    margin: 15px 15px 50px 15px;
     font-family: 'Montserrat', sans-serif;
     color: #4B2E1E;
 }
